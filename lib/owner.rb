@@ -50,9 +50,12 @@ class Owner
   end
 
   def sell_pets
-    self.cats.each {|cat| cat.mood = "nervous"}
-    self.dogs.each {|dog| dog.mood = "nervous"}
-    self.reset_all
+    pets = self.dog + self.cats
+
+    pets.each do |pet|
+      pet.mood = "nervous"
+      pet.owner = nil
+    end
   end
 
 end
