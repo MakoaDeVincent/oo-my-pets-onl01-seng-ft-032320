@@ -54,5 +54,6 @@ class Owner
     self.dogs.each {|dog| dog.mood = "nervous"}
     self.dogs.reset_all
     self.cats.reset_all
+  end
 
 end
